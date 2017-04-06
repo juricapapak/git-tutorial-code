@@ -49,6 +49,18 @@ class HelpCommand(LustObject):
     print(" help")
     print("   Prints help for all commands.")
 
+class square(LustObject):
+  def handle(self, arguments):
+    try: argument = int(arguments[0])
+    except (ValueError, IndexError):
+      print("square: could not read integer argument.")
+      return
+    print argument*argument
+    return
+  def print_help(self):
+      print(" square <integer>")
+      print("   Calculates the square of <integer>.")
+
 
 print("Hello! Welcome to the LARICS Universal Shell Terminal (LUST)!")
 print("Enter 'help' for a list of commands. Press Ctrl-D or enter 'quit' to quit.")
@@ -61,6 +73,7 @@ commands["quit"] = QuitCommand()
 # help command needs a reference to the parent dictionary in order to call each
 # command's print_help() function
 commands["help"] = HelpCommand(commands)
+commands["square"] = square()
 
 # input from Python 3 is raw_input in Python 2
 try: input = raw_input
