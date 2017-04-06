@@ -1,5 +1,5 @@
 ## git-tutorial
-Toy shell for git tutorial purposes
+Toy shell for git tutorial purposes, Slac nema pojma
 
 Fork this repository, and then clone it by running the following command:
 
@@ -27,5 +27,9 @@ Fork this repository, and then clone it by running the following command:
 
 ### Maintainers
 
-Slac
+<<<<<<< HEAD
 Mirko
+Slac
+=======
+>>>>>>> origin/master
+
